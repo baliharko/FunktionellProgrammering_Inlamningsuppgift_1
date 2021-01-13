@@ -36,7 +36,7 @@ public class RewriteMe {
     //Hur många frågor finns i databasen för en viss, given kategori (som ges som inparameter)
     public int getAmountOfQuestionsForACertainCategory(Category category){
         return (int) questions.stream()
-                .filter(p -> p.category.equals(category))
+                .filter(p -> p.getCategory().equals(category))
                 .count();
     }
 
